@@ -160,7 +160,7 @@ public class Main {
     }
 
     private static void getContact(Scanner in, ContactBook cBook) {
-
+        int number = in.nextInt(); in.nextLine();
     }
 
     private static void checkRepeated(ContactBook cBook) {
