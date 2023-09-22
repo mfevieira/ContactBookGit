@@ -93,4 +93,12 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public boolean hasRepeated() {
+        this.initializeIterator();
+        while (this.hasNext()){
+            Contact c = this.next();
+
+        }
+    }
+
 }

@@ -164,6 +164,10 @@ public class Main {
     }
 
     private static void checkRepeated(ContactBook cBook) {
-
+        if ( cBook.hasRepeated() ){
+            System.out.println(REPEATED_NUMBERS);
+        } else {
+            System.out.println(NO_REPEATED_NUMBERS);
+        }
     }
 }
