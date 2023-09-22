@@ -112,8 +112,22 @@ public class ContactBook {
         this.initializeIterator();
         while (this.hasNext()){
             Contact c = this.next();
-
+            if ( searchByPosition(c.getPhone(), this.currentContact + 1 )) {
+                return true;
+            }
         }
+        return false;
+    }
+
+    private boolean searchByPosition(int number, int pos) {
+        while ( pos < counter ) {
+            if ( contacts[pos].getPhone() == number ) {
+                return true;
+            } else {
+                pos++;
+            }
+        }
+        return false;
     }
 
 }
