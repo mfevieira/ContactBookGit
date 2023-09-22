@@ -1,6 +1,7 @@
 import contactBook.Contact;
 import contactBook.ContactBook;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -161,6 +162,9 @@ public class Main {
 
     private static void getContact(Scanner in, ContactBook cBook) {
         int number = in.nextInt(); in.nextLine();
+
+        String name = cBook.getContact(number);
+        System.out.println(Objects.requireNonNullElse(name, NO_PHONE));
     }
 
     private static void checkRepeated(ContactBook cBook) {
