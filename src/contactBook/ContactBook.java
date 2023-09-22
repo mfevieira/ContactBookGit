@@ -108,4 +108,12 @@ public class ContactBook {
         }
         return null;
     }
+    public boolean hasRepeated() {
+        this.initializeIterator();
+        while (this.hasNext()){
+            Contact c = this.next();
+
+        }
+    }
+
 }
