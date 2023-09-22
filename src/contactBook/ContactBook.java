@@ -93,4 +93,19 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public String getContact(int number) {
+        return this.searchByNumber(number);
+    }
+
+    private String searchByNumber(int number) {
+        int i = 0;
+        while ( i < counter ) {
+            if ( contacts[i].getPhone() == number ) {
+                return contacts[i].getName();
+            } else {
+                i++;
+            }
+        }
+        return null;
+    }
 }
